@@ -1,0 +1,277 @@
+/* Global Reset & Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Variables & Body Styles */
+:root {
+    --bg-color: #2E2836;
+    --accent-color: #3498db;
+    --edu-color: #862633;
+    --text-color: #fff;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Fixed Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(46, 40, 54, 0.8);  /* Slightly transparent */
+    border-bottom: 1px solid #444;
+    z-index: 1000;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+.navbar li {
+    margin: 0 16px;
+}
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: var(--accent-color);
+}
+
+/* Main Content Area */
+main {
+    padding: 100px 20px 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 16px;
+    background-color: var(--bg-color);
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+/* Home Page Styles */
+.intro {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.intro h1 {
+    font-size: 48px;
+    margin: 16px 0;
+}
+.profile-pic {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 50%;
+}
+.social-links a {
+    margin: 0 8px;
+    display: inline-block;
+}
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+.btn {
+    display: inline-block;
+    margin: 16px 0;
+    padding: 11px 24px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 300ms ease;
+}
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.resume-btn {
+    background-color: #2d7a9f; 
+    border-radius: 8px;        
+    padding: 11px 24px;        
+    color: var(--text-color);  
+    text-decoration: none;
+    transition: background-color 300ms ease;
+}
+
+.resume-btn:hover {
+    background-color: #256d8d; 
+}
+
+/* About Section (Home) */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.about-pic {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 0;
+}
+.about-text {
+    text-align: left;
+}
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+.about-content p {
+    flex: 1;
+}
+
+/* Education Page Styles */
+.education {
+    text-align: center;
+    margin-top: 32px;
+}
+.education h1 {
+    color: var(--edu-color);
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.edu-details {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 24px 0;
+    text-align: left;
+}
+.edu-img-container {
+    flex: 0 0 200px;
+}
+.edu-img {
+    width: 100%;
+    border-radius: 4px;
+}
+.edu-info {
+    flex: 1;
+    text-align: left;
+}
+
+/* Coursework Section Layout (Unified) */
+.coursework {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.coursework h2 {
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+.course {
+    flex: 1 1 calc(33.33% - 16px);
+    background-color: #444;
+    padding: 16px;
+    border-radius: 4px;
+    color: var(--text-color);
+    text-align: left;
+    margin-bottom: 24px;
+}
+.course h3 {
+    font-size: 22px;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+.course p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Experience Page Styles */
+.experience {
+    margin-top: 32px;
+}
+.experience-block {
+    background-color: #444;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+.experience-block h2 {
+    margin-bottom: 8px;
+    color: var(--accent-color);
+}
+.experience-block .location,
+.experience-block .company {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.experience-block .description {
+    font-size: 16px;
+}
+
+/* Contact Page Styles */
+.contact {
+    max-width: 600px;
+    margin: 32px auto;
+    background-color: #444;
+    padding: 32px;
+    border-radius: 4px;
+}
+.contact h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+.contact label {
+    margin: 8px 0 3px;
+}
+.contact input,
+.contact textarea {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+.contact button {
+    padding: 11px;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+.contact button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+    .about {
+        flex-direction: column;
+    }
+}
