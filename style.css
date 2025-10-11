@@ -75,6 +75,17 @@ body::before {
     );
 }
 
+/* Quest complete - bright yellow sunlight flashlight */
+:root.quest-complete body::before {
+    background: radial-gradient(
+        circle 250px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 249, 196, 0.6) 0%,
+        rgba(255, 249, 196, 0.4) 30%,
+        rgba(255, 249, 196, 0.2) 60%,
+        transparent 100%
+    );
+}
+
 /* Ensure content is above the flashlight effect */
 main,
 footer {
@@ -87,8 +98,8 @@ header {
     z-index: 10000;
 }
 
-/* Text shine effect - gradient follows cursor */
-h1, h2, h3, h4, h5, h6, p, a, span, label, li, .code-tag, .hero-subtitle, .experience-company, .experience-date {
+/* Text shine effect - gradient follows cursor - HEADINGS ONLY */
+h1, h2, h3, h4, h5, h6, .hero-subtitle, .experience-company, .experience-date {
     background:
         radial-gradient(
             circle 150px at var(--mouse-x, 50%) var(--mouse-y, 50%),
@@ -103,6 +114,37 @@ h1, h2, h3, h4, h5, h6, p, a, span, label, li, .code-tag, .hero-subtitle, .exper
     will-change: background-position;
 }
 
+/* Quest complete - plain solid black text for ALL headings (no gradients, no backgrounds) */
+:root.quest-complete h1,
+:root.quest-complete h2,
+:root.quest-complete h3,
+:root.quest-complete h4,
+:root.quest-complete h5,
+:root.quest-complete h6,
+:root.quest-complete .hero-subtitle,
+:root.quest-complete .experience-company,
+:root.quest-complete .experience-date {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: #000000 !important;
+    -webkit-text-stroke-width: 0 !important;
+    color: #000000 !important;
+}
+
+/* Quest complete - reset body text to solid dark color for readability */
+:root.quest-complete p,
+:root.quest-complete a:not(.treasure-icon):not(.social-links a):not(.resume-icon),
+:root.quest-complete span:not(.skill-tag):not(.experience-toggle):not(.code-tag),
+:root.quest-complete label,
+:root.quest-complete li {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: currentColor !important;
+    color: #000000;
+}
+
 /* Outlined headers with flashlight effect */
 .section-header h2,
 .contact-info h2 {
@@ -114,6 +156,15 @@ h1, h2, h3, h4, h5, h6, p, a, span, label, li, .code-tag, .hero-subtitle, .exper
     --header-active: 0;
     --header-mouse-x: 50%;
     --header-mouse-y: 50%;
+}
+
+/* Quest complete - plain solid black text (no effects) */
+:root.quest-complete .section-header h2,
+:root.quest-complete .contact-info h2 {
+    -webkit-text-fill-color: #000000;
+    -webkit-text-stroke-width: 0;
+    color: #000000;
+    background: none;
 }
 
 /* Simplified glow on outline when cursor is near */
@@ -133,6 +184,12 @@ h1, h2, h3, h4, h5, h6, p, a, span, label, li, .code-tag, .hero-subtitle, .exper
     opacity: calc(var(--header-active) * 0.6);
     filter: drop-shadow(0 0 15px var(--cyan)) drop-shadow(0 0 25px var(--purple));
     transition: opacity 0.2s ease;
+}
+
+/* Quest complete - hide glow effect */
+:root.quest-complete .section-header h2::after,
+:root.quest-complete .contact-info h2::after {
+    display: none;
 }
 
 /* Natural flashlight fill effect - follows cursor, gradual activation */
@@ -160,6 +217,12 @@ h1, h2, h3, h4, h5, h6, p, a, span, label, li, .code-tag, .hero-subtitle, .exper
     -webkit-background-clip: text;
     background-clip: text;
     transition: opacity 0.2s ease;
+}
+
+/* Quest complete - remove header fill background (keep transparent/outlined only) */
+:root.quest-complete .section-header h2::before,
+:root.quest-complete .contact-info h2::before {
+    display: none;
 }
 
 /* Typography */
@@ -201,6 +264,13 @@ p {
     border-bottom: 1px solid rgba(52, 240, 224, 0.1);
     z-index: 9999;
     padding: 20px 40px;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Quest complete - transparent navbar with light tint */
+:root.quest-complete .navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 249, 196, 0.3);
 }
 
 .navbar-content {
@@ -221,7 +291,12 @@ p {
     color: var(--cyan);
     font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, color 0.5s ease;
+}
+
+/* Quest complete - yellow logo */
+:root.quest-complete .logo {
+    color: #FFF9C4;
 }
 
 .logo-link:hover .logo {
@@ -351,6 +426,11 @@ p {
 
 .social-links a:hover img {
     filter: grayscale(0) brightness(1);
+}
+
+/* Quest complete - show original colors for hero social links */
+:root.quest-complete .hero .social-links img {
+    filter: none !important;
 }
 
 /* Resume icon styling */
@@ -713,6 +793,14 @@ section {
     transition: all 0.3s ease;
 }
 
+/* Quest complete - white background for form inputs */
+:root.quest-complete .form-group input,
+:root.quest-complete .form-group textarea {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -739,6 +827,14 @@ footer {
     border-top: 1px solid rgba(52, 240, 224, 0.1);
     font-size: 14px;
     color: var(--text-dim);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Quest complete - transparent footer like navbar */
+:root.quest-complete footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 249, 196, 0.3);
 }
 
 /* Back to Top Button */
@@ -1047,6 +1143,13 @@ footer {
 :root.bright-theme .contact-form {
     background: var(--bg-card);
     border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Quest complete - transparent card backgrounds */
+:root.quest-complete .expertise-card,
+:root.quest-complete .experience-item,
+:root.quest-complete .contact-form {
+    background: transparent;
 }
 
 /* Responsive treasure positioning */
