@@ -20,7 +20,7 @@ const treasureHunt = {
       messages: {
         first: "Perseverance... A trait forged in challenging times. Two more secrets remain hidden on this page...",
         second: "During service, Hyemin faced stressful environments where perseverance was key. One treasure left to find...",
-        third: "Perseverance—the final discovery! Hyemin's military service taught resilience under pressure."
+        third: "Perseverance - the final discovery! Hyemin's military service taught resilience under pressure."
       }
     },
     3: {
@@ -30,7 +30,7 @@ const treasureHunt = {
       messages: {
         first: "A basketball appears! Did you know Hyemin enjoys playing basketball? Keep exploring to discover more...",
         second: "A basketball! Hyemin's passion for the sport shines through. One more treasure awaits...",
-        third: "The final piece reveals itself—a basketball! Hyemin's love for the game completes the picture."
+        third: "The final piece reveals itself - a basketball! Hyemin's love for the game completes the picture."
       }
     }
   },
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
           submitBtn.disabled = false;
         }, (error) => {
           // Error
-          showDialog('Oops! Something went wrong. Please try again or email me directly at dannydoo1234@gmail.com');
+          showDialog('Oops! Something went wrong. Please try again or email me directly at hmdoo0112@gmail.com');
           console.error('EmailJS error:', error);
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;

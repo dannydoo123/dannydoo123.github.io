@@ -8,38 +8,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+      emailjs.init("YOUR_PUBLIC_KEY");
     })();
   </script>
 </head>
 <body>
-  <!-- Fixed Navigation Bar -->
   <header>
     <nav class="navbar">
       <div class="navbar-content">
-        <a href="#home" class="logo-link"><div class="logo">hyemindoo<span class="cursor-blink">_</span></div></a>
+        <a href="#home" class="logo-link"><div class="logo">dannydoo123<span class="cursor-blink">_</span></div></a>
         <ul>
           <li><a href="#home" class="active">home</a></li>
           <li><a href="#about">about</a></li>
           <li><a href="#expertise">expertise</a></li>
           <li><a href="#experience">experience</a></li>
+          <li><a href="#projects">projects</a></li>
           <li><a href="#contact">contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-content">
         <h1>HYEMIN DOO</h1>
-        <p class="hero-subtitle">SOFTWARE ENGINEER · FRONT END · APP DEVELOPER</p>
+        <p class="hero-subtitle">FULL-STACK SOFTWARE ENGINEER | AI-FOCUSED COMPUTER ENGINEERING</p>
         <div class="social-links">
           <a href="https://www.instagram.com/hmd_doo" target="_blank" rel="noopener noreferrer">
             <img src="images/instagram.png" alt="Instagram">
@@ -47,7 +44,7 @@
           <a href="https://www.linkedin.com/in/hyemin-doo-b881b3338" target="_blank" rel="noopener noreferrer">
             <img src="images/linkedin.png" alt="LinkedIn">
           </a>
-          <a href="images/Software_Engineer.pdf" download class="resume-icon">
+          <a href="images/Software_Engineer.pdf" download class="resume-icon" aria-label="Download resume">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -55,7 +52,6 @@
               <path d="M8 17H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <!-- Treasure 1: Spotify Icon (swapped from basketball) -->
           <a href="https://open.spotify.com/playlist/3PAnkujOTue6OWQjvxTh9S?si=c09f4627a08b4ab5" target="_blank" rel="noopener noreferrer" class="treasure-icon" id="treasure-1" data-treasure="1">
             <img src="images/spotify.png" alt="Spotify">
           </a>
@@ -63,115 +59,109 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
       <div class="section-header" data-animate>
         <h2 data-text="About Me">About Me</h2>
       </div>
       <div style="max-width: 800px; margin: 0 auto; text-align: center;" data-animate>
         <p>
-          Hi, I'm Hyemin Doo! Born in Albany, New York, and raised in Seoul, South Korea and Cupertino,
-          I'm currently studying Computer Engineering at Santa Clara University. I'm passionate about technology,
-          and lately, I've been diving deep into AI and machine learning—it's exciting to explore how they shape the future!
-          When I'm not coding, you'll find me playing the piano, collecting vinyl records, or shooting hoops.
-          I love connecting with like-minded people, so feel free to reach out—let's chat about tech, music, or anything in between!
+          Hi, I'm Hyemin Doo. Born in Albany, New York, and raised in Seoul, South Korea and Cupertino,
+          I'm completing my B.S. in Computer Engineering at Santa Clara University in June 2026. I build
+          full-stack and AI-powered systems across web apps, data pipelines, RAG workflows, and real-time
+          monitoring tools. I'm especially interested in responsible AI, data lifecycle management, and
+          risk-aware deployment in production environments. When I'm not coding, you'll find me playing piano,
+          collecting vinyl records, or shooting hoops.
         </p>
       </div>
     </section>
 
-    <!-- Expertise Section -->
     <section id="expertise">
       <div class="section-header">
         <h2 data-animate data-text="My Expertise">My Expertise</h2>
         <p data-animate>Specialized skills and technologies I work with</p>
       </div>
       <div class="expertise-grid">
-        <!-- Card 1 -->
         <div class="expertise-card" data-animate data-delay="0">
-          <div class="card-icon">💻</div>
+          <div class="card-icon">&lt;/&gt;</div>
           <span class="code-tag">&lt;h3&gt;</span>
           <h3>Full-Stack Development</h3>
           <span class="code-tag">&lt;/h3&gt;</span>
-          <p>Building modern web applications with React.js, TypeScript, Node.js, and Express.js.
-          Experienced in creating real-time monitoring systems and high-performance architectures.</p>
+          <p>Building production web applications with React, Next.js, TypeScript, Node.js, Prisma,
+          PostgreSQL, Supabase, and WebSocket backends for real-time systems.</p>
         </div>
 
-        <!-- Card 2 -->
         <div class="expertise-card" data-animate data-delay="150">
-          <div class="card-icon">🤖</div>
+          <div class="card-icon">AI</div>
           <span class="code-tag">&lt;h3&gt;</span>
-          <h3>Artificial Intelligence</h3>
+          <h3>AI Systems</h3>
           <span class="code-tag">&lt;/h3&gt;</span>
-          <p>Implementing Markov chains, decision forests, and large language models.
-          Passionate about machine learning and exploring how AI shapes the future of technology.</p>
+          <p>Designing AI features with LLM APIs, RAG, hybrid search, prompt engineering, model routing,
+          AI cost controls, and MCP/tool integrations.</p>
         </div>
 
-        <!-- Card 3 -->
         <div class="expertise-card" data-animate data-delay="300">
-          <div class="card-icon">⚙️</div>
+          <div class="card-icon">DB</div>
           <span class="code-tag">&lt;h3&gt;</span>
-          <h3>Systems Engineering</h3>
+          <h3>Data & Systems Engineering</h3>
           <span class="code-tag">&lt;/h3&gt;</span>
-          <p>Cross-platform communication between Windows and Linux embedded systems.
-          Experience with WebSocket architecture and handling high-frequency data streams.</p>
+          <p>Working with Python, C/C++, data analysis, embedded systems, security hardening,
+          and high-frequency data streams across Windows and Linux environments.</p>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
       <div class="section-header">
         <h2 data-animate data-text="Professional Experience">Professional Experience</h2>
       </div>
       <div class="experience-timeline">
-
-        <!-- Experience 1: MENSUS -->
         <div class="experience-item active" data-animate>
           <div class="experience-header">
             <div class="experience-title">
-              <h3>Software Engineer - Intern</h3>
+              <h3>Software Engineer</h3>
               <span class="experience-company">MENSUS</span>
             </div>
-            <span class="experience-date">Jul 2025 - Present</span>
+            <span class="experience-date">Jul 2025 - Dec 2025</span>
             <span class="experience-toggle">+</span>
           </div>
           <div class="experience-content">
-            <div class="experience-location">📍 Hybrid</div>
+            <div class="experience-location">Seoul, South Korea</div>
             <div class="experience-description">
-              <p>Developed a full-stack web monitoring system for plasma arc detection in semiconductor manufacturing facilities,
-              allowing communication between a Windows system monitor and Linux embedded system equipment.</p>
-              <p>Built a React.js/TypeScript frontend with real-time data visualization displaying critical plasma parameters
-              and threshold-based alerting system engineering with a Node.js/Express.js backend service with WebSocket architecture
-              to handle high-frequency data streams (>1kHz sampling rate).</p>
+              <p>Owned and shipped a production full-stack monitoring system for semiconductor equipment,
+              used by Samsung Semiconductor's research team on the factory floor.</p>
+              <p>Built a React/TypeScript dashboard and Node.js/WebSocket backend processing &gt;1kHz data streams,
+              improving monitoring responsiveness by 10-13%. Engineered reconnect and heartbeat logic that reduced
+              connection drop frequency by 43% across Windows and Linux systems.</p>
+              <p>Deployed an MCP server with Claude Code CLI for automated build and deploy workflows, saving
+              2-3 hours per day, and integrated a Claude x Copilot validation pipeline saving 1+ hour per PR.</p>
             </div>
             <div class="skill-tags">
               <span class="skill-tag">React.js</span>
               <span class="skill-tag">TypeScript</span>
               <span class="skill-tag">Node.js</span>
               <span class="skill-tag">WebSocket</span>
+              <span class="skill-tag">MCP</span>
               <span class="skill-tag">Real-time Data</span>
             </div>
           </div>
         </div>
 
-        <!-- Experience 2: Blue Ribbon Edu -->
         <div class="experience-item" data-animate>
           <div class="experience-header">
             <div class="experience-title">
-              <h3>Software Engineer - Intern</h3>
+              <h3>Data Analyst</h3>
               <span class="experience-company">Blue Ribbon Edu</span>
             </div>
             <span class="experience-date">Jun 2024 - Aug 2024</span>
             <span class="experience-toggle">+</span>
           </div>
           <div class="experience-content">
-            <div class="experience-location">📍 Gangnam-gu, Seoul, Republic of Korea</div>
+            <div class="experience-location">Gangnam-gu, Seoul, Republic of Korea</div>
             <div class="experience-description">
-              <p>Developed a Windows-based application using Python to streamline the process of sending test scores to parents
-              via integration with the KakaoTalk Messenger API. The program was designed to seamlessly interface with Excel,
-              extracting and formatting data for automated delivery.</p>
-              <p>This solution significantly optimized workflow efficiency, reducing task completion time from two hours to just 10 minutes.
-              Analyzed mock test scores for over 200 students, identifying trends for both class performance and individual progress.</p>
+              <p>Built a Python automation pipeline for Excel data extraction, validation, and formatted delivery
+              through the KakaoTalk Messenger API.</p>
+              <p>Cut instructor manual review by 60% across 200+ client records and analyzed mock test score trends
+              for class performance and individual student progress.</p>
             </div>
             <div class="skill-tags">
               <span class="skill-tag">Python</span>
@@ -183,7 +173,6 @@
           </div>
         </div>
 
-        <!-- Experience 3: ROK Army -->
         <div class="experience-item" data-animate>
           <div class="experience-header">
             <div class="experience-title">
@@ -194,57 +183,108 @@
             <span class="experience-toggle">+</span>
           </div>
           <div class="experience-content">
-            <div class="experience-location">📍 Namhae-gun, Gyeongsangnam-do, Republic of Korea</div>
+            <div class="experience-location">Namhae-gun, Gyeongsangnam-do, Republic of Korea</div>
             <div class="experience-description">
-              <p>Created a Windows XP executable program to automate tracking data management. This program processes daily text files
-              with over 1000 entries, including target names, locations, and departure points, enabling rapid searches and eliminating
-              the previous manual file-by-file search method.</p>
-              <p>Led a team of 12 personnel in executing mock missions, fostering leadership, teamwork, and operational efficiency
-              under high-pressure conditions. Gained discipline, adaptability, and a results-driven mindset through service in a
-              high-responsibility role.</p>
+              <p>Built an internal records management system that cut information retrieval from 30-40 minutes
+              to under 10 seconds, eliminating repeated manual file checks across the unit.</p>
+              <p>Led and coordinated a 12-person team during mock missions, ensuring accurate data reporting,
+              disciplined execution, and accountability under high-pressure operational conditions.</p>
             </div>
             <div class="skill-tags">
               <span class="skill-tag">C++</span>
               <span class="skill-tag">Windows XP</span>
               <span class="skill-tag">Leadership</span>
               <span class="skill-tag">Data Management</span>
-              <!-- Treasure 2: Perseverance Tag -->
               <span class="skill-tag treasure-tag" id="treasure-2" data-treasure="2">Perseverance</span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <section id="projects">
+      <div class="section-header">
+        <h2 data-animate data-text="Selected Projects">Selected Projects</h2>
+        <p data-animate>Production AI platforms and applied research from my current resume</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card" data-animate>
+          <div class="project-header">
+            <h3>Inkling - AI Writing Platform</h3>
+            <span class="experience-date">Mar 2026 - Present</span>
+          </div>
+          <p>Shipped a full-stack AI writing platform with Next.js 15, TypeScript, Prisma/PostgreSQL,
+          Supabase, Anthropic Claude APIs, PWA push notifications, and offline support.</p>
+          <p>Built RAG-powered essay generation grounded in a user's own writing, a Writing DNA voice profile
+          system, per-user AI spend caps, and admin observability. A token-efficient model routing pipeline
+          reduced per-session AI cost by 93%.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Claude API</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
+          <a href="https://inklingwrite.com" target="_blank" rel="noopener noreferrer" class="project-link">inklingwrite.com</a>
+        </article>
+
+        <article class="project-card" data-animate>
+          <div class="project-header">
+            <h3>Canvas AI - Academic Assistant</h3>
+            <span class="experience-date">Feb 2026 - Present</span>
+          </div>
+          <p>Built a full-stack AI study platform integrated with Canvas LMS, including a React/TypeScript web app
+          and Chrome Manifest V3 extension with content scripts and a background service worker.</p>
+          <p>Implemented hybrid RAG with pgvector cosine search, BM25 scoring, HyDE, and Reciprocal Rank Fusion,
+          plus defense-in-depth security with HTTP-only JWT cookies, AES-256-GCM encryption, bcrypt, Zod validation,
+          CSP headers, and endpoint rate limiting.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Chrome Extension</span>
+            <span class="skill-tag">pgvector</span>
+            <span class="skill-tag">Security</span>
+          </div>
+          <a href="https://github.com/dannydoo123/canvas_ai" target="_blank" rel="noopener noreferrer" class="project-link">GitHub Repository</a>
+        </article>
+
+        <article class="project-card" data-animate>
+          <div class="project-header">
+            <h3>LLM Architectures in Street Fighter III</h3>
+            <span class="experience-date">Sep 2025 - May 2026</span>
+          </div>
+          <p>Built a browser-based platform for benchmarking LLMs and VLMs in real-time Street Fighter III matches,
+          supporting human-vs-model and model-vs-model sessions through WebRTC streaming and a live MAME emulator
+          backend on Modal.</p>
+          <p>Created multimodal and text-only inference pipelines using frame input, structured game state,
+          SGLang/vLLM, and a custom YOLO detector with constrained decoding for valid move outputs.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">WebRTC</span>
+            <span class="skill-tag">Modal</span>
+            <span class="skill-tag">SGLang</span>
+            <span class="skill-tag">YOLO</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="section-header">
         <h2 data-animate data-text="Get In Touch">Get In Touch</h2>
       </div>
       <div class="contact-grid">
-        <!-- Left Column: Contact Info -->
         <div class="contact-info" data-animate>
           <h2 data-text="Available for Opportunities">Available for Opportunities</h2>
           <p>I'm always interested in hearing about new projects and opportunities.
-          Whether you have a question or just want to say hi, feel free to reach out!</p>
+          Whether you have a question or just want to say hi, feel free to reach out.</p>
 
-          <a href="mailto:dannydoo1234@gmail.com" class="contact-email">dannydoo1234@gmail.com</a>
+          <a href="mailto:hmdoo0112@gmail.com" class="contact-email">hmdoo0112@gmail.com</a>
 
           <div class="contact-socials">
-            <a href="https://www.linkedin.com/in/hyemin-doo-b881b3338" target="_blank" rel="noopener noreferrer">
-              → LinkedIn
-            </a>
-            <a href="https://www.instagram.com/hmd_doo" target="_blank" rel="noopener noreferrer">
-              → Instagram
-            </a>
-            <a href="https://github.com/hyemindoo" target="_blank" rel="noopener noreferrer">
-              → GitHub
-            </a>
+            <a href="https://www.linkedin.com/in/hyemin-doo-b881b3338" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/hmd_doo" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://github.com/dannydoo123" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
 
-        <!-- Right Column: Contact Form -->
         <div class="contact-form" data-animate>
           <h2>Send a Message</h2>
           <form id="contact-form">
@@ -275,27 +315,22 @@
     </section>
   </main>
 
-  <!-- Treasure 3: Basketball Icon (swapped from spotify) -->
   <a href="#" class="treasure-icon treasure-basketball" id="treasure-3" data-treasure="3">
     <img src="images/basketball.png" alt="Basketball">
   </a>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Hyemin Doo · Built with passion and code</p>
+    <p>&copy; 2026 Hyemin Doo | Built with passion and code</p>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTop">↑</button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">^</button>
 
-  <!-- Undertale-style Dialog Box -->
   <div class="dialog-box" id="dialogBox">
     <div class="dialog-content">
       <p class="dialog-text" id="dialogText"></p>
     </div>
   </div>
 
-  <!-- JavaScript for Interactions -->
   <script src="script.js"></script>
 </body>
 </html>

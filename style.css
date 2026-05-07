@@ -587,6 +587,65 @@ section {
     padding-bottom: 8px;
 }
 
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(52, 240, 224, 0.2);
+    border-radius: 8px;
+    padding: var(--card-padding);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(52, 240, 224, 0.45);
+    box-shadow: 0 18px 36px rgba(52, 240, 224, 0.16);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.project-header h3 {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.project-card p {
+    margin-bottom: 18px;
+}
+
+.project-card .skill-tags {
+    margin-top: 20px;
+}
+
+.project-link {
+    color: var(--cyan);
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 24px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--cyan);
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--orange);
+    border-color: var(--orange);
+    transform: translateX(6px);
+}
+
 .code-tag {
     font-family: 'Roboto Mono', monospace;
     color: var(--text-dim);
@@ -934,6 +993,11 @@ footer {
         gap: 8px;
     }
 
+    .project-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .experience-toggle {
         position: absolute;
         right: 24px;
@@ -1140,6 +1204,7 @@ footer {
 /* Bright theme card backgrounds */
 :root.bright-theme .expertise-card,
 :root.bright-theme .experience-item,
+:root.bright-theme .project-card,
 :root.bright-theme .contact-form {
     background: var(--bg-card);
     border-color: rgba(0, 0, 0, 0.2);
@@ -1148,6 +1213,7 @@ footer {
 /* Quest complete - transparent card backgrounds */
 :root.quest-complete .expertise-card,
 :root.quest-complete .experience-item,
+:root.quest-complete .project-card,
 :root.quest-complete .contact-form {
     background: transparent;
 }
